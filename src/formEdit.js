@@ -71,7 +71,7 @@ class FormEdit extends Component
         else{
             return (
             <div>
-                <p>First name: {this.state.first_name}</p> <br/>
+                <p>First name: {this.state.first_name}</p>
                 <p>Last name: {this.state.last_name}</p>
                 <button type="button" onClick={this.edit}>EDIT ME!</button>
             </div>
