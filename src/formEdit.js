@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-var name;
 //Decrement is a component
 class FormEdit extends Component 
 {
@@ -11,7 +10,9 @@ class FormEdit extends Component
         this.state = {
             view_edit: false,
             first_name: '',
-            last_name: ''
+            last_name: '',
+	    temp_first: '',
+	    temp_last: '',
         };
         this.handleFirstNameChange = this.handleFirstNameChange.bind(this);
         this.handleLastNameChange = this.handleLastNameChange.bind(this);
@@ -34,15 +35,17 @@ class FormEdit extends Component
     }
 
     edit() {
-        name = this.state;
+	this.setState({ temp_first: this.state.first_name });
+	this.setState({ temp_last: this.state.last_name });
         this.setState({view_edit: true});
     }
 
     cancel() {
         this.setState({
-            first_name: name.state.first_name,
-            last_name: name.state.last_name
+            first_name: this.state.temp_first,
+            last_name: this.state.temp_last
         });
+	this.setState({view_edit: false});
     }
 
     render() 
