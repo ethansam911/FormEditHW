@@ -3,7 +3,12 @@ import './App.css';
 import FormEdit from './formEdit';  
 import Folder from './Folder';
 
-class App extends Component {
+class App extends React.Component {
+  constructor()
+  {
+    super();
+    this.state = {}
+  }
   render() {
       return (
 	  <div id="container">
