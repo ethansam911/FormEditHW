@@ -17,8 +17,8 @@ class Folder extends Component {
     {
         this.setState
         ({
-            showFiles: true 
-        });
+           showFiles: !this.state.showFiles 
+        })
     }
     render() 
     {
