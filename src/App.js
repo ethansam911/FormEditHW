@@ -1,13 +1,23 @@
 import React, { Component } from 'react';
 import './App.css';
-import FormEdit from './formEdit';  
+import FormEdit from './formEdit'; 
+import Folder from './folder' 
 
-class App extends Component {
+class App extends React.Component {
+  constructor()
+  {
+    super();
+    this.state = {}
+  }
   render() {
     return (
-     
-    <FormEdit/> 
-    
+      <div>
+        <br />
+        <FormEdit />
+        <br/><br/>
+        <Folder/>
+      </div>
+
     );
   }
 }
