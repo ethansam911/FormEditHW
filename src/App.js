@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 import './App.css';
 import FormEdit from './formEdit';  
+import Folder from './Folder';
 
 class App extends Component {
   render() {
-    return (
-     
-    <FormEdit/> 
+      return (
+	  <div id="container">
+	      <FormEdit/>
+	      <Folder name="Home"/>
+	      </div>
     
     );
   }
